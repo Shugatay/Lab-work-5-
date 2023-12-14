@@ -1,0 +1,19 @@
+function vowelsAndConsonants(s) {
+    const vowels = "aeiou";
+  let vowelsResult = "";
+  let consonantsResult = "";
+
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i].toLowerCase();
+
+    if (vowels.includes(char)) {
+      vowelsResult += char + "\n";
+    } else if (char.match(/[a-z]/i)) { // Check if it's a consonant
+      consonantsResult += char + "\n";
+    }
+  }
+
+ 
+  console.log(vowelsResult + consonantsResult);
+ 
+}
