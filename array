@@ -1,0 +1,15 @@
+function getSecondLargest(nums) {
+    // Complete the function
+     if (nums.length < 2) {
+        return null;  // There is no second largest element
+    }
+
+    // Remove duplicates from the array and sort it in descending order
+    let sortedNums = Array.from(new Set(nums)).sort((a, b) => b - a);
+
+    // Return the second element, which is the second largest
+    return sortedNums[1];
+let numbers = [];
+let result = getSecondLargest(nums);
+console.log( result);
+}
